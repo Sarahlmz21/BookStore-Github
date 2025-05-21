@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageStore - Votre librairie en ligne</title>
+    <link rel="shortcut icon" href="image/logo.jpg" type="image/logo">
+    <meta name="description" content="Découvrez PageStore, votre librairie en ligne avec une large sélection de livres pour tous les goûts. Livraison partout en Algérie.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pagestore.dz/">
+    <meta property="og:title" content="PageStore - Votre librairie en ligne">
+    <meta property="og:description" content="Découvrez votre prochain livre préféré sur PageStore. Une sélection unique de livres pour tous les goûts.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1526243741027-444d633d7365">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un livre, un auteur...">
+                    <button aria-label="Rechercher"><i class="fa fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="content/panier.html" class="cart-icon" aria-label="Panier">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="content/compte.html" class="account-icon" aria-label="Compte">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="content/livres.html">Livres <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                               <li><a href="livres.html?category=fiction">Fiction</a></li>
+                            <li><a href="livres.html?category=science-fiction">Science-Fiction</a></li>
+                            <li><a href="livres.html?category=drame">Drame</a></li>
+                            <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                             <li><a href="livres.html?category=essai">Essai</a></li>
+                              <li><a href="livres.html?category=thriller">Thriller</a></li>
+                              <li><a href="livres.html?category=romance">Romance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="content/livres.html?new=true">Nouveautés</a></li>
+                    <li><a href="content/livres.html?bestseller=true">Meilleures ventes</a></li>
+                    <li><a href="content/blog.html">Blog</a></li>
+                    <li><a href="content/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Découvrez votre prochain livre préféré</h1>
+            <p>Une sélection unique de livres pour tous les goûts et toutes les envies.</p>
+            <a href="content/livres.html" class="btn btn-primary">Découvrir notre catalogue</a>
+        </div>
+    </section>
+    
+    <!-- Featured Books Section -->
+    <section class="featured-books">
+        <div class="container">
+            <h2 class="section-title">Livres à découvrir</h2>
+            
+            <div class="books-grid">
+                <div class="book-card" data-category="romance">
+                    <div class="book-image">
+                        <img src="image/itstartswithus.jpg" alt="It Starts With Us">
+                    </div>
+                    <div class="book-info">
+                        <h3>It Starts With Us</h3>
+                        <p class="book-author">Colleen Hoover</p>
+                        <div class="book-footer">
+                            <span class="book-price">2500 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter It Starts With Us au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="romance">
+                    <div class="book-image">
+                        <img src="image/itendswithus.jpg" alt="It Ends With Us">
+                    </div>
+                    <div class="book-info">
+                        <h3>It Ends With Us</h3>
+                        <p class="book-author">Colleen Hoover</p>
+                        <div class="book-footer">
+                            <span class="book-price">2300 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter It Ends With Us au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="romance">
+                    <div class="book-image">
+                        <img src="image/demain.jpg" alt="Demain">
+                    </div>
+                    <div class="book-info">
+                        <h3>Demain</h3>
+                        <p class="book-author">Guillaume Musso</p>
+                        <div class="book-footer">
+                            <span class="book-price">1800 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter Demain au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card" data-category="romance">
+                    <div class="book-image">
+                        <img src="image/linstantpresent.jpg" alt="Instant Present">
+                    </div>
+                    <div class="book-info">
+                        <h3>Instant Present</h3>
+                        <p class="book-author">Guillaume Musso</p>
+                        <div class="book-footer">
+                            <span class="book-price">1950 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter Instant Present au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="content/livres.html" class="btn btn-outline">Voir tous les livres</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explorez nos catégories</h2>
+            
+            <div class="categories-grid">
+                <a href="content/livres.html?category=fiction" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090" alt="Romans et Fiction">
+                    <div class="category-overlay">
+                        <h3>Romans et Fiction</h3>
+                        <p>Découvrez des mondes imaginaires</p>
+                    </div>
+                </a>
+                
+                <a href="content/livres.html?category=non-fiction" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="Non-fiction">
+                    <div class="category-overlay">
+                        <h3>Non-fiction</h3>
+                        <p>Élargissez vos horizons</p>
+                    </div>
+                </a>
+                
+                <a href="content/livres.html?category=jeunesse" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Jeunesse">
+                    <div class="category-overlay">
+                        <h3>Jeunesse</h3>
+                        <p>Pour les petits et grands enfants</p>
+                    </div>
+                </a>
+                
+                <a href="content/livres.html?category=education" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1530538987395-032d1800fdd4" alt="Éducation">
+                    <div class="category-overlay">
+                        <h3>Éducation</h3>
+                        <p>Manuels et livres scolaires</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Ce que nos clients disent</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"J'ai découvert tellement de livres incroyables grâce à PageStore. Le service est impeccable et les livraisons sont toujours rapides."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Sarah Benmeziane</h4>
+                            <p>Cliente depuis 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Les recommandations personnalisées sont d'une précision incroyable ! J'ai trouvé mon livre préféré de l'année grâce à PageStore."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Karim Meziani</h4>
+                            <p>Client depuis 2021</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Une équipe au service client très attentionnée et des prix compétitifs. PageStore est devenu mon partenaire de lecture privilégié."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Amina Haddad</h4>
+                            <p>Cliente depuis 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Restez informé</h2>
+                <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités, nos offres exclusives et des conseils de lecture.</p>
+                
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit" class="btn btn-light">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </h3>
+                    <p>Votre librairie en ligne préférée avec une large sélection de livres pour tous les goûts.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="content/a-propos.html">À propos de nous</a></li>
+                        <li><a href="content/faq.html">FAQ</a></li>
+                        <li><a href="content/conditions.html">Conditions d'utilisation</a></li>
+                        <li><a href="content/confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="content/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="content/livres.html?category=fiction">Romans et Fiction</a></li>
+                        <li><a href="content/livres.html?category=non-fiction">Non-fiction</a></li>
+                        <li><a href="content/livres.html?category=jeunesse">Jeunesse</a></li>
+                        <li><a href="content/livres.html?category=education">Éducation</a></li>
+                        <li><a href="content/livres.html">Toutes les catégories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Rue Krim Belkacem, Tizi-ouzou, Algérie</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>0546631036</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>contact@pagestore.dz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> PageStore. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="javascript/script.js"></script>
+</body>
+</html>

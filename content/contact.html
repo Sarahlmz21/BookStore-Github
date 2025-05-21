@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - PageStore</title>
+    <link rel="shortcut icon" href="../image/logo.jpg" type="image/logo">
+    <meta name="description" content="Contactez l'équipe PageStore pour toute question, suggestion ou problème concernant nos livres ou services.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pagestore.dz/content/contact.html">
+    <meta property="og:title" content="Contactez-nous - PageStore">
+    <meta property="og:description" content="Contactez l'équipe PageStore pour toute question, suggestion ou problème concernant nos livres ou services.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544947950-fa07a98d237f">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un livre, un auteur...">
+                    <button aria-label="Rechercher"><i class="fa fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="panier.html" class="cart-icon" aria-label="Panier">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="compte.html" class="account-icon" aria-label="Compte">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="livres.html">Livres <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="livres.html?category=fiction">Romans</a></li>
+                            <li><a href="livres.html?category=science-fiction">Science-Fiction</a></li>
+                            <li><a href="livres.html?category=biographies">Biographies</a></li>
+                            <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="livres.html?new=true">Nouveautés</a></li>
+                    <li><a href="livres.html?bestseller=true">Meilleures ventes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <h2>Envoyez-nous un message</h2>
+                    <p>Vous avez une question ou une suggestion ? N'hésitez pas à nous envoyer un message et nous vous répondrons dans les plus brefs délais.</p>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Choisir un sujet</option>
+                                <option value="question">Question sur un produit</option>
+                                <option value="order">Suivi de commande</option>
+                                <option value="return">Retour ou remboursement</option>
+                                <option value="suggestion">Suggestion</option>
+                                <option value="other">Autre</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">J'accepte que mes données soient traitées conformément à la <a href="confidentialite.html">politique de confidentialité</a></label>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary full-width">Envoyer le message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-container">
+                    <h2>Nos coordonnées</h2>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>Adresse</h3>
+                            <p>Rue Krim Belkacem, Tizi-ouzou, Algérie</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>Téléphone</h3>
+                            <p>+213 546 631 036</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>Email</h3>
+                            <p>contact@pagestore.dz</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fa fa-clock"></i>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>Horaires</h3>
+                            <p>Dimanche - Jeudi : 9h - 17h</p>
+                            <p>Vendredi - Samedi : 10h - 15h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links-container">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="map-container">
+                <h2 class="section-title">Nous trouver</h2>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12912.068809223567!2d4.04113055!3d36.71323355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128dc154a28e7fbd%3A0x97fd13b0b74f08b1!2sTizi%20Ouzou!5e0!3m2!1sfr!2sdz!4v1653844053997!5m2!1sfr!2sdz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Questions fréquentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment suivre ma commande ?</h3>
+                        <span class="faq-toggle"><i class="fa fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez suivre votre commande en vous connectant à votre compte et en accédant à la section "Mes commandes". Vous recevrez également des mises à jour par email à chaque étape de votre commande.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels sont les délais de livraison ?</h3>
+                        <span class="faq-toggle"><i class="fa fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les délais de livraison varient en fonction de votre localisation :</p>
+                        <ul>
+                            <li>Tizi-Ouzou : 1-2 jours ouvrables</li>
+                            <li>Grandes villes : 2-4 jours ouvrables</li>
+                            <li>Autres régions : 3-7 jours ouvrables</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment retourner un article ?</h3>
+                        <span class="faq-toggle"><i class="fa fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez retourner un article dans les 14 jours suivant sa réception. Pour ce faire, connectez-vous à votre compte, allez dans "Mes commandes", sélectionnez la commande concernée et cliquez sur "Retourner". Suivez ensuite les instructions pour préparer votre colis.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels sont les modes de paiement acceptés ?</h3>
+                        <span class="faq-toggle"><i class="fa fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous acceptons plusieurs modes de paiement :</p>
+                        <ul>
+                            <li>Paiement à la livraison</li>
+                            <li>Virement bancaire</li>
+                            <li>Cartes bancaires (Visa, Mastercard)</li>
+                            <li>Mobile money (Bayazi, Mobilis)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </h3>
+                    <p>Votre librairie en ligne préférée avec une large sélection de livres pour tous les goûts.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos de nous</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="conditions.html">Conditions d'utilisation</a></li>
+                        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="livres.html?category=fiction">Romans et Fiction</a></li>
+                        <li><a href="livres.html?category=non-fiction">Non-fiction</a></li>
+                        <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        <li><a href="livres.html?category=education">Éducation</a></li>
+                        <li><a href="livres.html">Toutes les catégories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Rue Krim Belkacem, Tizi-ouzou, Algérie</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>0546631036</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>contact@pagestore.dz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> PageStore. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../javascript/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestion du formulaire de contact
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Réinitialiser les messages d'erreur
+                    document.querySelectorAll('.error-message').forEach(el => {
+                        el.textContent = '';
+                    });
+                    
+                    // Récupérer les valeurs des champs
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value.trim();
+                    const privacyAccepted = document.getElementById('privacy').checked;
+                    
+                    // Valider les champs
+                    let isValid = true;
+                    
+                    if (name.length < 3) {
+                        document.querySelector('#name + .error-message').textContent = 'Le nom doit contenir au moins 3 caractères.';
+                        isValid = false;
+                    }
+                    
+                    if (!validateEmail(email)) {
+                        document.querySelector('#email + .error-message').textContent = 'Veuillez entrer une adresse email valide.';
+                        isValid = false;
+                    }
+                    
+                    if (!subject) {
+                        document.querySelector('#subject + .error-message').textContent = 'Veuillez sélectionner un sujet.';
+                        isValid = false;
+                    }
+                    
+                    if (message.length < 20) {
+                        document.querySelector('#message + .error-message').textContent = 'Le message doit contenir au moins 20 caractères.';
+                        isValid = false;
+                    }
+                    
+                    if (!privacyAccepted) {
+                        document.querySelector('#privacy + label + .error-message').textContent = 'Vous devez accepter la politique de confidentialité.';
+                        isValid = false;
+                    }
+                    
+                    if (isValid) {
+                        // Simulation d'envoi de formulaire
+                        showNotification('Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+                        contactForm.reset();
+                    }
+                });
+            }
+            
+            // Gestion des FAQ
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Fermer toutes les FAQ
+                    faqItems.forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                        faqItem.querySelector('.faq-toggle i').className = 'fa fa-plus';
+                    });
+                    
+                    // Ouvrir la FAQ cliquée si elle n'était pas déjà ouverte
+                    if (!isActive) {
+                        item.classList.add('active');
+                        item.querySelector('.faq-toggle i').className = 'fa fa-minus';
+                    }
+                });
+            });
+        });
+    </script>
+    
+    <style>
+        /* Styles spécifiques à la page contact */
+        .page-banner {
+            background-color: var(--secondary);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        
+        .page-banner h1 {
+            color: var(--text);
+            margin-bottom: 0;
+        }
+        
+        .contact-section {
+            padding: 3rem 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .contact-form-container {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-form-container h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form-container p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-form {
+            margin-top: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--secondary-dark);
+            font-family: var(--font-body);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(125, 68, 39, 0.2);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+        
+        .error-message {
+            color: var(--error);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            min-height: 1rem;
+        }
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        .contact-info-container {
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+        }
+        
+        .contact-info-container h2 {
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .contact-info-item {
+            display: flex;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info-icon {
+            font-size: 1.25rem;
+            margin-right: 1rem;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact-info-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: var(--white);
+        }
+        
+        .contact-info-text p {
+            margin-bottom: 0.25rem;
+            opacity: 0.9;
+        }
+        
+        .social-links-container {
+            margin-top: 2rem;
+        }
+        
+        .social-links-container h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--white);
+            color: var(--primary);
+        }
+        
+        .map-container {
+            margin-bottom: 3rem;
+        }
+        
+        .map {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-section {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-question {
+            background-color: var(--secondary-light);
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question h3 {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+        }
+        
+        .faq-toggle {
+            color: var(--primary);
+        }
+        
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 1.25rem;
+        }
+        
+        .faq-answer p {
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (min-width: 992px) {
+            .contact-container {
+                grid-template-columns: 3fr 2fr;
+            }
+        }
+    </style>
+</body>
+</html>

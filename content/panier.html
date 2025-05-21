@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Panier - PageStore</title>
+    <link rel="shortcut icon" href="../image/logo.jpg" type="image/logo">
+    <meta name="description" content="Consultez votre panier d'achat, modifiez les quantités ou procédez au paiement de vos livres sur PageStore.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pagestore.dz/content/panier.html">
+    <meta property="og:title" content="Votre Panier - PageStore">
+    <meta property="og:description" content="Consultez votre panier d'achat, modifiez les quantités ou procédez au paiement de vos livres sur PageStore.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1532012197267-da84d127e765">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un livre, un auteur...">
+                    <button aria-label="Rechercher"><i class="fa fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="panier.html" class="cart-icon" aria-label="Panier">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="compte.html" class="account-icon" aria-label="Compte">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="livres.html">Livres <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                           <li><a href="livres.html?category=fiction">Fiction</a></li>
+                            <li><a href="livres.html?category=science-fiction">Science-Fiction</a></li>
+                            <li><a href="livres.html?category=drame">Drame</a></li>
+                            <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                             <li><a href="livres.html?category=essai">Essai</a></li>
+                              <li><a href="livres.html?category=thriller">Thriller</a></li>
+                              <li><a href="livres.html?category=romance">Romance</a></li>
+                               <li><a href="livres.html?category=education">Education</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="livres.html?new=true">Nouveautés</a></li>
+                    <li><a href="livres.html?bestseller=true">Meilleures ventes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Votre Panier</h1>
+        </div>
+    </section>
+    
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-container">
+                <div id="cart-items" class="cart-items">
+                    <!-- Les éléments du panier seront chargés dynamiquement ici -->
+                </div>
+                
+                <div id="cart-items" class="cart-items">
+    <!-- Les éléments du panier seront chargés dynamiquement ici -->
+</div>
+
+<div id="cart-empty" class="cart-empty">
+    <i class="fa fa-shopping-cart"></i>
+    <h2>Votre panier est vide</h2>
+    <p>Vous n'avez pas encore ajouté de livres à votre panier.</p>
+    <a href="livres.html" class="btn btn-primary">Parcourir nos livres</a>
+</div>
+
+<div id="cart-summary" class="cart-summary">
+    <h2>Récapitulatif de commande</h2>
+    
+    <div class="summary-row">
+        <span>Sous-total</span>
+        <span id="subtotal">0 DA</span>
+    </div>
+    
+    <div class="summary-row">
+        <span>Frais de livraison</span>
+        <span id="shipping">500 DA</span>
+    </div>
+    
+    <div class="summary-row total">
+        <span>Total</span>
+        <span id="total">500 DA</span>
+    </div>
+    
+    <button id="checkout-btn" class="btn btn-primary checkout-btn">
+        Passer la commande
+    </button>
+    
+    <div class="continue-shopping">
+        <a href="livres.html">
+            <i class="fa fa-arrow-left"></i> Continuer mes achats
+        </a>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recommended Books Section -->
+    <section class="recommended-books">
+        <div class="container">
+            <h2 class="section-title">Vous pourriez aussi aimer</h2>
+            
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="../image/itstartswithus.jpg" alt="It Starts With Us">
+                    </div>
+                    <div class="book-info">
+                        <h3>It Starts With Us</h3>
+                        <p class="book-author">Colleen Hoover</p>
+                        <div class="book-footer">
+                            <span class="book-price">2500 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter It Starts With Us au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="../image/itendswithus.jpg" alt="It Ends With Us">
+                    </div>
+                    <div class="book-info">
+                        <h3>It Ends With Us</h3>
+                        <p class="book-author">Colleen Hoover</p>
+                        <div class="book-footer">
+                            <span class="book-price">2300 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter It Ends With Us au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="../image/demain.jpg" alt="Demain">
+                    </div>
+                    <div class="book-info">
+                        <h3>Demain</h3>
+                        <p class="book-author">Guillaume Musso</p>
+                        <div class="book-footer">
+                            <span class="book-price">1800 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter Demain au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-image">
+                        <img src="../image/linstantpresent.jpg" alt="Instant Present">
+                    </div>
+                    <div class="book-info">
+                        <h3>Instant Present</h3>
+                        <p class="book-author">Guillaume Musso</p>
+                        <div class="book-footer">
+                            <span class="book-price">1950 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter Instant Present au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card" data-category="thriller">
+                    <div class="book-image">
+                        <img src="../image/lachambre.jpg" alt="L'Énigme de la chambre 622">
+                    </div>
+                    <div class="book-info">
+                        <h3>L'Énigme de la chambre 622</h3>
+                        <p class="book-author">Joël Dicker</p>
+                        <div class="book-footer">
+                            <span class="book-price">2100 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="thriller">
+                    <div class="book-image">
+                        <img src="../image/hitman.jpg" alt="Agent 47:Birth of the Hitman">
+                    </div>
+                    <div class="book-info">
+                        <h3>Agent 47:Birth of the Hitman</h3>
+                        <p class="book-author">Christopher Sebela-Jonathan Lau-Ariel Medel</p>
+                        <div class="book-footer">
+                            <span class="book-price">2890 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="book-card" data-category="romance">
+                    <div class="book-image">
+                        <img src="../image/avanttoi.jpg" alt="Avant toi">
+                    </div>
+                    <div class="book-info">
+                        <h3>Avant toi</h3>
+                        <p class="book-author">Jojo Moyes</p>
+                        <div class="book-footer">
+                            <span class="book-price">1350 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="book-card" data-category="thriller">
+                    <div class="book-image">
+                        <img src="../image/maxpayne.jpg" alt="Max Payne:The Dmerican Dream">
+                    </div>
+                    <div class="book-info">
+                        <h3>Max Payne:The American Dream</h3>
+                        <p class="book-author">Alessio Chiadini Beuri</p>
+                        <div class="book-footer">
+                            <span class="book-price">2870 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="romance">
+                    <div class="book-image">
+                        <img src="../image/outlander.jpg" alt="Outlander">
+                    </div>
+                    <div class="book-info">
+                        <h3>Outlander</h3>
+                        <p class="book-author">Diana Gobaldon</p>
+                        <div class="book-footer">
+                            <span class="book-price">1850 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="Jeunesse">
+                    <div class="book-image">
+                        <img src="../image/harrypotter.jpg" alt="Harry Potter à l'école des sorciers">
+                    </div>
+                    <div class="book-info">
+                        <h3>Harry Potter à l'école des sorciers</h3>
+                        <p class="book-author">J.K.Rowling</p>
+                        <div class="book-footer">
+                            <span class="book-price">3000 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="drame">
+                    <div class="book-image">
+                        <img src="../image/vie.jpg" alt="Une Vie">
+                    </div>
+                    <div class="book-info">
+                        <h3>Une Vie</h3>
+                        <p class="book-author">Guy De Maupassant</p>
+                        <div class="book-footer">
+                            <span class="book-price">1100 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="thriller">
+                    <div class="book-image">
+                        <img src="../image/filledutrain.jpg" alt="Fille du train">
+                    </div>
+                    <div class="book-info">
+                        <h3>Fille du train</h3>
+                        <p class="book-author">Paula Hawkins</p>
+                        <div class="book-footer">
+                            <span class="book-price">2100 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="fiction">
+                    <div class="book-image">
+                        <img src="../image/lalchimiste.jpg" alt="L'Alchemiste">
+                    </div>
+                    <div class="book-info">
+                        <h3>L'Alchemiste</h3>
+                        <p class="book-author">Paulo Coelho</p>
+                        <div class="book-footer">
+                            <span class="book-price">3300 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="science-fiction">
+                    <div class="book-image">
+                        <img src="../image/fondation.jpg" alt="Fondation">
+                    </div>
+                    <div class="book-info">
+                        <h3>Fondation</h3>
+                        <p class="book-author">Isaac Asimov</p>
+                        <div class="book-footer">
+                            <span class="book-price">2000 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="jeunesse">
+                    <div class="book-image">
+                        <img src="../image/hungergames.jpg" alt="Hunger Games">
+                    </div>
+                    <div class="book-info">
+                        <h3>Hunger Games</h3>
+                        <p class="book-author">Suzanne Collins</p>
+                        <div class="book-footer">
+                            <span class="book-price">1000 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="drame">
+                    <div class="book-image">
+                        <img src="../image/hurlevent.jpg" alt="Les Hauts de Hurlevent">
+                    </div>
+                    <div class="book-info">
+                        <h3>Les Hauts de Hurlevent</h3>
+                        <p class="book-author">Emily Bronte</p>
+                        <div class="book-footer">
+                            <span class="book-price">1900 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="fiction">
+                    <div class="book-image">
+                        <img src="../image/khaled.jpg" alt="Les cerfs-volants de Kaboul">
+                    </div>
+                    <div class="book-info">
+                        <h3>Les cerfs-volants de Kaboul</h3>
+                        <p class="book-author">Khaled Hossein</p>
+                        <div class="book-footer">
+                            <span class="book-price">1000 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="thriller">
+                    <div class="book-image">
+                        <img src="../image/gonegirl.jpg" alt="Gone Girl">
+                    </div>
+                    <div class="book-info">
+                        <h3>Gone Girl</h3>
+                        <p class="book-author">Gillian Flynn</p>
+                        <div class="book-footer">
+                            <span class="book-price">2700 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="essai">
+                    <div class="book-image">
+                        <img src="../image/vous.jpg" alt="Indignez-vous">
+                    </div>
+                    <div class="book-info">
+                        <h3>Indignez-vous</h3>
+                        <p class="book-author">Stéphane Hessel</p>
+                        <div class="book-footer">
+                            <span class="book-price">1750 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="jeunesse">
+                    <div class="book-image">
+                        <img src="../image/wonder.jpg" alt="Wonder">
+                    </div>
+                    <div class="book-info">
+                        <h3>Wonder</h3>
+                        <p class="book-author">R.J Palacia</p>
+                        <div class="book-footer">
+                            <span class="book-price">2100 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="book-card" data-category="science-fiction">
+                    <div class="book-image">
+                        <img src="../image/Fahrenheit.jpg" alt="Fahrenheit 451">
+                    </div>
+                    <div class="book-info">
+                        <h3>Fahrenheit 451</h3>
+                        <p class="book-author">Ray Bradbury</p>
+                        <div class="book-footer">
+                            <span class="book-price">1500 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="fiction">
+                    <div class="book-image">
+                        <img src="../image/maitreillusions.jpg" alt="Le maitre des illusions ">
+                    </div>
+                    <div class="book-info">
+                        <h3>Le maitre des illusions</h3>
+                        <p class="book-author">Donna Tartt</p>
+                        <div class="book-footer">
+                            <span class="book-price">1150 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="thriller">
+                    <div class="book-image">
+                        <img src="../image/shutterisland.jpg" alt="Shutter Island ">
+                    </div>
+                    <div class="book-info">
+                        <h3>Shutter Island</h3>
+                        <p class="book-author">Dennis Lehane</p>
+                        <div class="book-footer">
+                            <span class="book-price">2350 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="jeunesse">
+                    <div class="book-image">
+                        <img src="../image/passemiroir.webp" alt="La Passe-Miroir:Les fiancés de l'hiver">
+                    </div>
+                    <div class="book-info">
+                        <h3>La passe-Miroir: Les fiancés de l'hiver</h3>
+                        <p class="book-author">Christelle Dabos</p>
+                        <div class="book-footer">
+                            <span class="book-price">1450 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="essai">
+                    <div class="book-image">
+                        <img src="../image/chambreasoi.jpg" alt="Une chambre à soi">
+                    </div>
+                    <div class="book-info">
+                        <h3>Une chambre à soi</h3>
+                        <p class="book-author">Virginia Woolf</p>
+                        <div class="book-footer">
+                            <span class="book-price">3000 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="thriller">
+                    <div class="book-image">
+                        <img src="../image/silence.jpg" alt="Le silence des agneaux">
+                    </div>
+                    <div class="book-info">
+                        <h3>Le silence des agneaux</h3>
+                        <p class="book-author">Thomas Harris</p>
+                        <div class="book-footer">
+                            <span class="book-price">1340 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="jeunesse">
+                    <div class="book-image">
+                        <img src="../image/chocolaterie.jpg" alt="Charlie et la chocolaterie">
+                    </div>
+                    <div class="book-info">
+                        <h3>Charlie et la chocolaterie</h3>
+                        <p class="book-author">Roald Dahl</p>
+                        <div class="book-footer">
+                            <span class="book-price">1400 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="fiction">
+                    <div class="book-image">
+                        <img src="../image/lapeste.jpg" alt="La peste">
+                    </div>
+                    <div class="book-info">
+                        <h3>La peste</h3>
+                        <p class="book-author">Albert Camus</p>
+                        <div class="book-footer">
+                            <span class="book-price">2950 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="book-card" data-category="romance">
+                    <div class="book-image">
+                        <img src="../image/etoile.jpg" alt="Nos étoiles contraires">
+                    </div>
+                    <div class="book-info">
+                        <h3>Nos étoiles contraires</h3>
+                        <p class="book-author">John Green</p>
+                        <div class="book-footer">
+                            <span class="book-price">1900 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="book-card" data-category="L'éducation">
+                    <div class="book-image">
+                        <img src="../image/leducation.jpg" alt="L'education">
+                    </div>
+                    <div class="book-info">
+                        <h3>L'éducation</h3>
+                        <p class="book-author">Durkheim</p>
+                        <div class="book-footer">
+                            <span class="book-price">1250 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="education">
+                    <div class="book-image">
+                        <img src="../image/lenfant.jpg" alt="l'enfant">
+                    </div>
+                    <div class="book-info">
+                        <h3>L'enfant/h3>
+                        <p class="book-author">Maria Montessori</p>
+                        <div class="book-footer">
+                            <span class="book-price">950 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="education">
+                    <div class="book-image">
+                        <img src="../image/devoirderesister.jpg" alt="Pédagogie : Le devoir de résister">
+                    </div>
+                    <div class="book-info">
+                        <h3>Pédagogie : Le devoir de résister</h3>
+                        <p class="book-author">Philippe Meirieu</p>
+                        <div class="book-footer">
+                            <span class="book-price">1100 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="education">
+                    <div class="book-image">
+                        <img src="../image/enfanceheureuse.jpg" alt="Pour une enfance heureuse" >
+                    </div>
+                    <div class="book-info">
+                        <h3>Pour une enfance heureuse</h3>
+                        <p class="book-author">Catherine Gueguen</p>
+                        <div class="book-footer">
+                            <span class="book-price">1100 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>     
+
+                <div class="book-card" data-category="education">
+                    <div class="book-image">
+                        <img src="../image/apprendre.jpg" alt="Apprendre autrement avec la pédagogie positive" >
+                    </div>
+                    <div class="book-info">
+                        <h3>Apprendre autrement avec la pédagogie positive</h3>
+                        <p class="book-author">Audrey Akoun et Isabelle Pailleau</p>
+                        <div class="book-footer">
+                            <span class="book-price">1120 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="book-card" data-category="education">
+                    <div class="book-image">
+                        <img src="../image/ecole.jpg" alt="Une école du troisième type" >
+                    </div>
+                    <div class="book-info">
+                        <h3>Une école du troisième type</h3>
+                        <p class="book-author">Bernard Collot</p>
+                        <div class="book-footer">
+                            <span class="book-price">860 DA</span>
+                            <button class="add-to-cart" aria-label="Ajouter au panier">
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </h3>
+                    <p>Votre librairie en ligne préférée avec une large sélection de livres pour tous les goûts.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos de nous</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="conditions.html">Conditions d'utilisation</a></li>
+                        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="livres.html?category=fiction">Romans et Fiction</a></li>
+                        <li><a href="livres.html?category=non-fiction">Non-fiction</a></li>
+                        <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        <li><a href="livres.html?category=education">Éducation</a></li>
+                        <li><a href="livres.html">Toutes les catégories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Rue Krim Belkacem, Tizi-ouzou, Algérie</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>0546631036</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>contact@pagestore.dz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> PageStore. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../javascript/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Récupérer le panier depuis le localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Récupérer les éléments du DOM
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartEmptyMessage = document.getElementById('cart-empty');
+            const cartSummary = document.getElementById('cart-summary');
+            const subtotalElement = document.getElementById('subtotal');
+            const totalElement = document.getElementById('total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            
+            // Afficher le panier
+            updateCartDisplay();
+            
+            function updateCartDisplay() {
+                if (cart.length === 0) {
+                    // Afficher le message "panier vide" et masquer le récapitulatif
+                    cartEmptyMessage.style.display = 'flex';
+                    cartItemsContainer.style.display = 'none';
+                    cartSummary.style.display = 'none';
+                } else {
+                    // Masquer le message "panier vide" et afficher le récapitulatif
+                    cartEmptyMessage.style.display = 'none';
+                    cartItemsContainer.style.display = 'block';
+                    cartSummary.style.display = 'block';
+                    
+                    // Vider le conteneur des articles du panier
+                    cartItemsContainer.innerHTML = '';
+                    
+                    // Ajouter chaque article au panier
+                    cart.forEach(item => {
+                        const cartItem = document.createElement('div');
+                        cartItem.className = 'cart-item';
+                        cartItem.innerHTML = `
+                            <div class="cart-item-image">
+                                <img src="${item.image}" alt="${item.title}">
+                            </div>
+                            <div class="cart-item-details">
+                                <h3>${item.title}</h3>
+                                <p class="cart-item-author">${item.author}</p>
+                                <p class="cart-item-price">${item.price} DA</p>
+                            </div>
+                            <div class="cart-item-actions">
+                                <div class="quantity-control">
+                                    <button class="quantity-btn minus" data-id="${item.id}">-</button>
+                                    <span class="quantity">${item.quantity}</span>
+                                    <button class="quantity-btn plus" data-id="${item.id}">+</button>
+                                </div>
+                                <button class="remove-btn" data-id="${item.id}">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        `;
+                        
+                        cartItemsContainer.appendChild(cartItem);
+                    });
+                    
+                    // Ajouter les écouteurs d'événements pour les boutons de quantité et de suppression
+                    addCartItemEventListeners();
+                    
+                    // Mettre à jour le récapitulatif
+                    updateCartSummary();
+                }
+            }
+            
+            function addCartItemEventListeners() {
+                // Boutons d'augmentation de quantité
+                document.querySelectorAll('.quantity-btn.plus').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const itemId = parseInt(this.getAttribute('data-id'));
+                        const itemIndex = cart.findIndex(item => item.id === itemId);
+                        
+                        if (itemIndex > -1) {
+                            cart[itemIndex].quantity += 1;
+                            saveCart();
+                            updateCartDisplay();
+                        }
+                    });
+                });
+                
+                // Boutons de diminution de quantité
+                document.querySelectorAll('.quantity-btn.minus').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const itemId = parseInt(this.getAttribute('data-id'));
+                        const itemIndex = cart.findIndex(item => item.id === itemId);
+                        
+                        if (itemIndex > -1) {
+                            if (cart[itemIndex].quantity > 1) {
+                                cart[itemIndex].quantity -= 1;
+                            } else {
+                                cart.splice(itemIndex, 1);
+                            }
+                            
+                            saveCart();
+                            updateCartDisplay();
+                        }
+                    });
+                });
+                
+                // Boutons de suppression
+                document.querySelectorAll('.remove-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const itemId = parseInt(this.getAttribute('data-id'));
+                        const itemIndex = cart.findIndex(item => item.id === itemId);
+                        
+                        if (itemIndex > -1) {
+                            const itemTitle = cart[itemIndex].title;
+                            cart.splice(itemIndex, 1);
+                            saveCart();
+                            updateCartDisplay();
+                            showNotification(`${itemTitle} a été supprimé de votre panier.`);
+                        }
+                    });
+                });
+            }
+            
+            function updateCartSummary() {
+                // Calculer le sous-total
+                const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+                
+                // Frais de livraison fixes
+                const shipping = subtotal > 0 ? 500 : 0;
+                
+                // Total de la commande
+                const total = subtotal + shipping;
+                
+                // Mettre à jour les éléments du DOM
+                subtotalElement.textContent = `${subtotal} DA`;
+                totalElement.textContent = `${total} DA`;
+            }
+            
+            function saveCart() {
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartCount();
+            }
+            
+            // Gestionnaire d'événement pour le bouton de paiement
+            checkoutBtn.addEventListener('click', function() {
+                if (cart.length > 0) {
+                    // Rediriger vers la page de paiement ou afficher une notification
+                    showNotification('Cette fonctionnalité sera bientôt disponible !');
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        /* Styles spécifiques à la page panier */
+        .page-banner {
+            background-color: var(--secondary);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        
+        .page-banner h1 {
+            color: var(--text);
+            margin-bottom: 0;
+        }
+        
+        .cart-section {
+            padding: 3rem 0;
+        }
+        
+        .cart-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 1rem;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1rem;
+            box-shadow: var(--shadow);
+            align-items: center;
+        }
+        
+        .cart-item-image {
+            width: 80px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: var(--radius);
+        }
+        
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .cart-item-details h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .cart-item-author {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cart-item-price {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0;
+        }
+        
+        .cart-item-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--secondary);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: 700;
+        }
+        
+        .quantity-btn:hover {
+            background-color: var(--secondary-dark);
+        }
+        
+        .quantity {
+            font-weight: 700;
+            min-width: 30px;
+            text-align: center;
+        }
+        
+        .remove-btn {
+            background: none;
+            border: none;
+            color: var(--error);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .remove-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .cart-empty {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .cart-empty i {
+            font-size: 3rem;
+            color: var(--text-light);
+            opacity: 0.5;
+        }
+        
+        .cart-empty h2 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .cart-empty p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        .cart-summary {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .cart-summary h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--secondary);
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--secondary-light);
+        }
+        
+        .summary-row.total {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text);
+            border-bottom: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkout-btn {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .continue-shopping {
+            text-align: center;
+        }
+        
+        .continue-shopping a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .recommended-books {
+            background-color: var(--white);
+            padding: 4rem 0;
+        }
+        
+        @media (min-width: 992px) {
+            .cart-container {
+                grid-template-columns: 1fr 350px;
+                align-items: start;
+            }
+        }
+    </style>
+</body>
+</html>

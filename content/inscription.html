@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un compte - PageStore</title>
+    <link rel="shortcut icon" href="../image/logo.jpg" type="image/logo">
+    <meta name="description" content="Créez un compte sur PageStore pour profiter d'une expérience d'achat personnalisée et suivre vos commandes.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pagestore.dz/content/inscription.html">
+    <meta property="og:title" content="Créer un compte - PageStore">
+    <meta property="og:description" content="Créez un compte sur PageStore pour profiter d'une expérience d'achat personnalisée et suivre vos commandes.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544947950-fa07a98d237f">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un livre, un auteur...">
+                    <button aria-label="Rechercher"><i class="fa fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="panier.html" class="cart-icon" aria-label="Panier">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="compte.html" class="account-icon" aria-label="Compte">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="livres.html">Livres <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="livres.html?category=fiction">Romans</a></li>
+                            <li><a href="livres.html?category=science-fiction">Science-Fiction</a></li>
+                            <li><a href="livres.html?category=biographies">Biographies</a></li>
+                            <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="livres.html?new=true">Nouveautés</a></li>
+                    <li><a href="livres.html?bestseller=true">Meilleures ventes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Créer un compte</h1>
+        </div>
+    </section>
+    
+    <!-- Registration Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form-container">
+                    <form id="registration-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="firstname">Prénom</label>
+                            <input type="text" id="firstname" name="firstname" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastname">Nom</label>
+                            <input type="text" id="lastname" name="lastname" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="ex : 0546631036">
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" id="password" name="password" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirmer le mot de passe</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">J'accepte les <a href="conditions.html">conditions d'utilisation</a> et la <a href="confidentialite.html">politique de confidentialité</a></label>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Je souhaite recevoir les actualités et les offres spéciales par email</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary full-width">Créer mon compte</button>
+                    </form>
+                    
+                    <div class="auth-separator">
+                        <span>ou</span>
+                    </div>
+                    
+                    <div class="auth-alternatives">
+                        <p>Vous avez déjà un compte ?</p>
+                        <a href="connexion.html" class="btn btn-outline full-width">Se connecter</a>
+                    </div>
+                </div>
+                
+                <div class="auth-benefits">
+                    <h2>Pourquoi créer un compte ?</h2>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fa fa-truck"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Suivi de commande</h3>
+                            <p>Suivez vos commandes en temps réel et consultez votre historique d'achats.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Liste de souhaits</h3>
+                            <p>Créez votre liste de souhaits pour garder en mémoire les livres qui vous intéressent.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fa fa-percentage"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Offres exclusives</h3>
+                            <p>Bénéficiez de promotions exclusives et de réductions spéciales pour nos membres.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>Recommandations personnalisées</h3>
+                            <p>Recevez des recommandations basées sur vos préférences et votre historique d'achat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </h3>
+                    <p>Votre librairie en ligne préférée avec une large sélection de livres pour tous les goûts.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos de nous</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="conditions.html">Conditions d'utilisation</a></li>
+                        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="livres.html?category=fiction">Romans et Fiction</a></li>
+                        <li><a href="livres.html?category=non-fiction">Non-fiction</a></li>
+                        <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        <li><a href="livres.html?category=education">Éducation</a></li>
+                        <li><a href="livres.html">Toutes les catégories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Rue Krim Belkacem, Tizi-ouzou, Algérie</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>0546631036</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>contact@pagestore.dz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> PageStore. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../javascript/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const registrationForm = document.getElementById('registration-form');
+            
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Réinitialiser les messages d'erreur
+                    document.querySelectorAll('.error-message').forEach(el => {
+                        el.textContent = '';
+                    });
+                    
+                    // Récupérer les valeurs des champs
+                    const firstname = document.getElementById('firstname').value.trim();
+                    const lastname = document.getElementById('lastname').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const password = document.getElementById('password').value;
+                    const confirmPassword = document.getElementById('confirm-password').value;
+                    const termsAccepted = document.getElementById('terms').checked;
+                    
+                    // Valider les champs
+                    let isValid = true;
+                    
+                    if (firstname.length < 2) {
+                        document.querySelector('#firstname + .error-message').textContent = 'Le prénom doit contenir au moins 2 caractères.';
+                        isValid = false;
+                    }
+                    
+                    if (lastname.length < 2) {
+                        document.querySelector('#lastname + .error-message').textContent = 'Le nom doit contenir au moins 2 caractères.';
+                        isValid = false;
+                    }
+                    
+                    if (!validateEmail(email)) {
+                        document.querySelector('#email + .error-message').textContent = 'Veuillez entrer une adresse email valide.';
+                        isValid = false;
+                    }
+                    
+                    if (phone && !validatePhone(phone)) {
+                        document.querySelector('#phone + .error-message').textContent = 'Veuillez entrer un numéro de téléphone valide.';
+                        isValid = false;
+                    }
+                    
+                    if (password.length < 8) {
+                        document.querySelector('#password + .error-message').textContent = 'Le mot de passe doit contenir au moins 8 caractères.';
+                        isValid = false;
+                    }
+                    
+                    if (password !== confirmPassword) {
+                        document.querySelector('#confirm-password + .error-message').textContent = 'Les mots de passe ne correspondent pas.';
+                        isValid = false;
+                    }
+                    
+                    if (!termsAccepted) {
+                        document.querySelector('#terms + label + .error-message').textContent = 'Vous devez accepter les conditions d\'utilisation.';
+                        isValid = false;
+                    }
+                    
+                    if (isValid) {
+                        // Simulation d'envoi de formulaire
+                        showNotification('Votre compte a été créé avec succès ! Vous allez être redirigé vers la page de connexion.');
+                        
+                        // Redirection vers la page de connexion après 3 secondes
+                        setTimeout(() => {
+                            window.location.href = 'connexion.html';
+                        }, 3000);
+                    }
+                });
+            }
+            
+            function validatePhone(phone) {
+                // Valider un numéro de téléphone algérien
+                const re = /^(0)(5|6|7)[0-9]{8}$/;
+                return re.test(phone);
+            }
+        });
+    </script>
+    
+    <style>
+        /* Styles spécifiques à la page d'inscription */
+        .page-banner {
+            background-color: var(--secondary);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        
+        .page-banner h1 {
+            color: var(--text);
+            margin-bottom: 0;
+        }
+        
+        .auth-section {
+            padding: 3rem 0;
+        }
+        
+        .auth-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .auth-form-container {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .auth-form {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--secondary-dark);
+            font-family: var(--font-body);
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(125, 68, 39, 0.2);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+        
+        .error-message {
+            color: var(--error);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            min-height: 1rem;
+        }
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        .auth-separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        .auth-separator::before,
+        .auth-separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--secondary-dark);
+        }
+        
+        .auth-separator span {
+            padding: 0 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .auth-alternatives {
+            text-align: center;
+        }
+        
+        .auth-alternatives p {
+            margin-bottom: 1rem;
+        }
+        
+        .auth-benefits {
+            display: none;
+            background-color: var(--secondary-light);
+            border-radius: var(--radius);
+            padding: 2rem;
+        }
+        
+        .auth-benefits h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-icon {
+            background-color: var(--primary-light);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .benefit-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefit-text p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        
+        @media (min-width: 992px) {
+            .auth-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .auth-benefits {
+                display: block;
+            }
+        }
+    </style>
+</body>
+</html>

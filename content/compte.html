@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Compte - PageStore</title>
+    <link rel="shortcut icon" href="../image/logo.jpg" type="image/logo">
+    <meta name="description" content="Gérez votre compte PageStore, consultez vos commandes, modifiez vos informations personnelles et accédez à vos avantages.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pagestore.dz/content/compte.html">
+    <meta property="og:title" content="Mon Compte - PageStore">
+    <meta property="og:description" content="Gérez votre compte PageStore, consultez vos commandes, modifiez vos informations personnelles et accédez à vos avantages.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544947950-fa07a98d237f">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un livre, un auteur...">
+                    <button aria-label="Rechercher"><i class="fa fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="panier.html" class="cart-icon" aria-label="Panier">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="compte.html" class="account-icon" aria-label="Compte">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="livres.html">Livres <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="livres.html?category=fiction">Romans</a></li>
+                            <li><a href="livres.html?category=science-fiction">Science-Fiction</a></li>
+                            <li><a href="livres.html?category=biographies">Biographies</a></li>
+                            <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="livres.html?new=true">Nouveautés</a></li>
+                    <li><a href="livres.html?bestseller=true">Meilleures ventes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Mon Compte</h1>
+        </div>
+    </section>
+    
+    <!-- Account Section -->
+    <section class="account-section">
+        <div class="container">
+            <div id="login-section" class="account-login">
+                <div class="auth-form-container">
+                    <h2>Connexion</h2>
+                    <p>Connectez-vous pour accéder à votre compte et suivre vos commandes.</p>
+                    
+                    <form id="login-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="login-email">Adresse email</label>
+                            <input type="email" id="login-email" name="email" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="login-password">Mot de passe</label>
+                            <input type="password" id="login-password" name="password" required>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Se souvenir de moi</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary full-width">Se connecter</button>
+                    </form>
+                    
+                    <div class="auth-separator">
+                        <span>ou</span>
+                    </div>
+                    
+                    <div class="auth-alternatives">
+                        <p>Vous n'avez pas encore de compte ?</p>
+                        <a href="inscription.html" class="btn btn-outline full-width">Créer un compte</a>
+                        <p class="mt-1">
+                            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="account-dashboard" class="account-dashboard" style="display: none;">
+                <div class="dashboard-sidebar">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="user-details">
+                            <h3 id="user-name">Prénom Nom</h3>
+                            <p id="user-email">email@exemple.com</p>
+                        </div>
+                    </div>
+                    
+                    <ul class="dashboard-menu">
+                        <li class="active" data-target="dashboard-overview">
+                            <a href="#overview"><i class="fa fa-th-large"></i> Tableau de bord</a>
+                        </li>
+                        <li data-target="dashboard-orders">
+                            <a href="#orders"><i class="fa fa-shopping-bag"></i> Mes commandes</a>
+                        </li>
+                        <li data-target="dashboard-wishlist">
+                            <a href="#wishlist"><i class="fa fa-heart"></i> Ma liste de souhaits</a>
+                        </li>
+                        <li data-target="dashboard-profile">
+                            <a href="#profile"><i class="fa fa-user-edit"></i> Mon profil</a>
+                        </li>
+                        <li data-target="dashboard-addresses">
+                            <a href="#addresses"><i class="fa fa-map-marker-alt"></i> Mes adresses</a>
+                        </li>
+                        <li id="logout-button">
+                            <a href="#"><i class="fa fa-sign-out-alt"></i> Déconnexion</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="dashboard-content">
+                    <!-- Overview Section -->
+                    <div id="dashboard-overview" class="dashboard-section active">
+                        <h2>Bienvenue, <span id="welcome-name">Prénom</span> !</h2>
+                        
+                        <div class="overview-cards">
+                            <div class="overview-card">
+                                <div class="overview-card-icon">
+                                    <i class="fa fa-shopping-bag"></i>
+                                </div>
+                                <div class="overview-card-content">
+                                    <h3>Commandes</h3>
+                                    <p id="orders-count">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="overview-card">
+                                <div class="overview-card-icon">
+                                    <i class="fa fa-heart"></i>
+                                </div>
+                                <div class="overview-card-content">
+                                    <h3>Liste de souhaits</h3>
+                                    <p id="wishlist-count">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="overview-card">
+                                <div class="overview-card-icon">
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="overview-card-content">
+                                    <h3>Points fidélité</h3>
+                                    <p id="points-count">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-orders">
+                            <div class="section-header">
+                                <h3>Commandes récentes</h3>
+                                <a href="#orders" class="view-all">Voir tout</a>
+                            </div>
+                            
+                            <div class="no-orders-message">
+                                <p>Vous n'avez pas encore passé de commande.</p>
+                                <a href="livres.html" class="btn btn-outline">Commencer à magasiner</a>
+                            </div>
+                        </div>
+                        
+                        <div class="wishlist-preview">
+                            <div class="section-header">
+                                <h3>Livres dans votre liste de souhaits</h3>
+                                <a href="#wishlist" class="view-all">Voir tout</a>
+                            </div>
+                            
+                            <div class="no-wishlist-message">
+                                <p>Votre liste de souhaits est vide.</p>
+                                <a href="livres.html" class="btn btn-outline">Explorer notre catalogue</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Orders Section -->
+                    <div id="dashboard-orders" class="dashboard-section">
+                        <h2>Mes commandes</h2>
+                        
+                        <div class="no-orders-message">
+                            <p>Vous n'avez pas encore passé de commande.</p>
+                            <a href="livres.html" class="btn btn-outline">Commencer à magasiner</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Wishlist Section -->
+                    <div id="dashboard-wishlist" class="dashboard-section">
+                        <h2>Ma liste de souhaits</h2>
+                        
+                        <div class="no-wishlist-message">
+                            <p>Votre liste de souhaits est vide.</p>
+                            <a href="livres.html" class="btn btn-outline">Explorer notre catalogue</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Section -->
+                    <div id="dashboard-profile" class="dashboard-section">
+                        <h2>Mon profil</h2>
+                        
+                        <form id="profile-form" class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profile-firstname">Prénom</label>
+                                    <input type="text" id="profile-firstname" name="firstname" value="">
+                                    <div class="error-message"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="profile-lastname">Nom</label>
+                                    <input type="text" id="profile-lastname" name="lastname" value="">
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-email">Adresse email</label>
+                                <input type="email" id="profile-email" name="email" value="">
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-phone">Téléphone</label>
+                                <input type="tel" id="profile-phone" name="phone" value="">
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-divider">
+                                <h3>Changer le mot de passe</h3>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profile-current-password">Mot de passe actuel</label>
+                                <input type="password" id="profile-current-password" name="current-password">
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profile-new-password">Nouveau mot de passe</label>
+                                    <input type="password" id="profile-new-password" name="new-password">
+                                    <div class="error-message"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="profile-confirm-password">Confirmer le mot de passe</label>
+                                    <input type="password" id="profile-confirm-password" name="confirm-password">
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <!-- Addresses Section -->
+                    <div id="dashboard-addresses" class="dashboard-section">
+                        <h2>Mes adresses</h2>
+                        
+                        <div class="no-addresses-message">
+                            <p>Vous n'avez pas encore ajouté d'adresse.</p>
+                            <button id="add-address-btn" class="btn btn-outline">Ajouter une adresse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </h3>
+                    <p>Votre librairie en ligne préférée avec une large sélection de livres pour tous les goûts.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                      
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos de nous</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="conditions.html">Conditions d'utilisation</a></li>
+                        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="livres.html?category=fiction">Romans et Fiction</a></li>
+                        <li><a href="livres.html?category=non-fiction">Non-fiction</a></li>
+                        <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        <li><a href="livres.html?category=education">Éducation</a></li>
+                        <li><a href="livres.html">Toutes les catégories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Rue Krim Belkacem, Tizi-ouzou, Algérie</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>0546631036</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>contact@pagestore.dz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> PageStore. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../javascript/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestion des onglets du tableau de bord
+            const menuItems = document.querySelectorAll('.dashboard-menu li');
+            const dashboardSections = document.querySelectorAll('.dashboard-section');
+            
+            // Vérifier s'il y a un hash dans l'URL
+            function checkHash() {
+                const hash = window.location.hash;
+                if (hash) {
+                    // Trouver l'élément de menu correspondant
+                    const targetMenuItem = document.querySelector(`.dashboard-menu li[data-target="dashboard-${hash.substring(1)}"]`);
+                    if (targetMenuItem) {
+                        // Simuler un clic sur cet élément
+                        targetMenuItem.click();
+                    }
+                }
+            }
+            
+            menuItems.forEach(item => {
+                if (item.id !== 'logout-button') {
+                    item.addEventListener('click', function(e) {
+                        // Si le lien est cliqué, empêcher le comportement par défaut
+                        if (e.target.tagName === 'A') {
+                            e.preventDefault();
+                        }
+                        
+                        // Désactiver tous les éléments de menu
+                        menuItems.forEach(menuItem => {
+                            menuItem.classList.remove('active');
+                        });
+                        
+                        // Activer l'élément de menu cliqué
+                        this.classList.add('active');
+                        
+                        // Masquer toutes les sections
+                        dashboardSections.forEach(section => {
+                            section.classList.remove('active');
+                        });
+                        
+                        // Afficher la section correspondante
+                        const targetSection = document.getElementById(this.getAttribute('data-target'));
+                        if (targetSection) {
+                            targetSection.classList.add('active');
+                        }
+                    });
+                }
+            });
+            
+            // Gestion de la connexion
+            const loginForm = document.getElementById('login-form');
+            const loginSection = document.getElementById('login-section');
+            const accountDashboard = document.getElementById('account-dashboard');
+            const logoutButton = document.getElementById('logout-button');
+            
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Réinitialiser les messages d'erreur
+                    document.querySelectorAll('.error-message').forEach(el => {
+                        el.textContent = '';
+                    });
+                    
+                    // Récupérer les valeurs des champs
+                    const email = document.getElementById('login-email').value.trim();
+                    const password = document.getElementById('login-password').value;
+                    
+                    // Valider les champs
+                    let isValid = true;
+                    
+                    if (!validateEmail(email)) {
+                        document.querySelector('#login-email + .error-message').textContent = 'Veuillez entrer une adresse email valide.';
+                        isValid = false;
+                    }
+                    
+                    if (password.length < 6) {
+                        document.querySelector('#login-password + .error-message').textContent = 'Le mot de passe doit contenir au moins 6 caractères.';
+                        isValid = false;
+                    }
+                    
+                    if (isValid) {
+                        // Simulation de connexion
+                        // Dans un cas réel, vous feriez une requête à votre backend ici
+                        
+                        // Pour la démo, on va simuler un utilisateur connecté
+                        const user = {
+                            firstName: 'John',
+                            lastName: 'Doe',
+                            email: email,
+                            orders: [],
+                            wishlist: [],
+                            points: 0
+                        };
+                        
+                        // Stocker les informations de l'utilisateur dans le localStorage
+                        localStorage.setItem('currentUser', JSON.stringify(user));
+                        
+                        // Mettre à jour les informations de l'utilisateur dans le tableau de bord
+                        updateUserInfo(user);
+                        
+                        // Afficher le tableau de bord et masquer le formulaire de connexion
+                        loginSection.style.display = 'none';
+                        accountDashboard.style.display = 'flex';
+                        
+                        // Afficher un message de succès
+                        showNotification('Connexion réussie ! Bienvenue sur votre compte.');
+                        
+                        // Vérifier s'il y a un hash dans l'URL
+                        checkHash();
+                    }
+                });
+            }
+            
+            // Gestion de la déconnexion
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Supprimer les informations de l'utilisateur du localStorage
+                    localStorage.removeItem('currentUser');
+                    
+                    // Afficher le formulaire de connexion et masquer le tableau de bord
+                    loginSection.style.display = 'block';
+                    accountDashboard.style.display = 'none';
+                    
+                    // Afficher un message de succès
+                    showNotification('Vous avez été déconnecté avec succès.');
+                });
+            }
+            
+            // Vérifier si l'utilisateur est déjà connecté
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (currentUser) {
+                // Mettre à jour les informations de l'utilisateur dans le tableau de bord
+                updateUserInfo(currentUser);
+                
+                // Afficher le tableau de bord et masquer le formulaire de connexion
+                loginSection.style.display = 'none';
+                accountDashboard.style.display = 'flex';
+                
+                // Vérifier s'il y a un hash dans l'URL
+                checkHash();
+            }
+            
+            // Gestion du formulaire de profil
+            const profileForm = document.getElementById('profile-form');
+            
+            if (profileForm) {
+                profileForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Réinitialiser les messages d'erreur
+                    document.querySelectorAll('.error-message').forEach(el => {
+                        el.textContent = '';
+                    });
+                    
+                    // Récupérer les valeurs des champs
+                    const firstName = document.getElementById('profile-firstname').value.trim();
+                    const lastName = document.getElementById('profile-lastname').value.trim();
+                    const email = document.getElementById('profile-email').value.trim();
+                    const phone = document.getElementById('profile-phone').value.trim();
+                    const currentPassword = document.getElementById('profile-current-password').value;
+                    const newPassword = document.getElementById('profile-new-password').value;
+                    const confirmPassword = document.getElementById('profile-confirm-password').value;
+                    
+                    // Valider les champs
+                    let isValid = true;
+                    
+                    if (firstName.length < 2) {
+                        document.querySelector('#profile-firstname + .error-message').textContent = 'Le prénom doit contenir au moins 2 caractères.';
+                        isValid = false;
+                    }
+                    
+                    if (lastName.length < 2) {
+                        document.querySelector('#profile-lastname + .error-message').textContent = 'Le nom doit contenir au moins 2 caractères.';
+                        isValid = false;
+                    }
+                    
+                    if (!validateEmail(email)) {
+                        document.querySelector('#profile-email + .error-message').textContent = 'Veuillez entrer une adresse email valide.';
+                        isValid = false;
+                    }
+                    
+                    if (phone && !validatePhone(phone)) {
+                        document.querySelector('#profile-phone + .error-message').textContent = 'Veuillez entrer un numéro de téléphone valide.';
+                        isValid = false;
+                    }
+                    
+                    // Vérifier le mot de passe uniquement s'il est renseigné
+                    if (currentPassword || newPassword || confirmPassword) {
+                        if (!currentPassword) {
+                            document.querySelector('#profile-current-password + .error-message').textContent = 'Veuillez entrer votre mot de passe actuel.';
+                            isValid = false;
+                        }
+                        
+                        if (newPassword.length < 6) {
+                            document.querySelector('#profile-new-password + .error-message').textContent = 'Le mot de passe doit contenir au moins 6 caractères.';
+                            isValid = false;
+                        }
+                        
+                        if (newPassword !== confirmPassword) {
+                            document.querySelector('#profile-confirm-password + .error-message').textContent = 'Les mots de passe ne correspondent pas.';
+                            isValid = false;
+                        }
+                    }
+                    
+                    if (isValid) {
+                        // Récupérer l'utilisateur actuel
+                        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                        
+                        // Mettre à jour les informations de l'utilisateur
+                        currentUser.firstName = firstName;
+                        currentUser.lastName = lastName;
+                        currentUser.email = email;
+                        currentUser.phone = phone;
+                        
+                        // Stocker les informations de l'utilisateur dans le localStorage
+                        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                        
+                        // Mettre à jour les informations de l'utilisateur dans le tableau de bord
+                        updateUserInfo(currentUser);
+                        
+                        // Réinitialiser les champs de mot de passe
+                        document.getElementById('profile-current-password').value = '';
+                        document.getElementById('profile-new-password').value = '';
+                        document.getElementById('profile-confirm-password').value = '';
+                        
+                        // Afficher un message de succès
+                        showNotification('Votre profil a été mis à jour avec succès.');
+                    }
+                });
+            }
+            
+            // Fonction pour mettre à jour les informations de l'utilisateur dans le tableau de bord
+            function updateUserInfo(user) {
+                // Mettre à jour le nom de l'utilisateur
+                document.getElementById('user-name').textContent = `${user.firstName} ${user.lastName}`;
+                document.getElementById('welcome-name').textContent = user.firstName;
+                
+                // Mettre à jour l'email de l'utilisateur
+                document.getElementById('user-email').textContent = user.email;
+                
+                // Mettre à jour les champs du formulaire de profil
+                if (document.getElementById('profile-firstname')) {
+                    document.getElementById('profile-firstname').value = user.firstName;
+                }
+                
+                if (document.getElementById('profile-lastname')) {
+                    document.getElementById('profile-lastname').value = user.lastName;
+                }
+                
+                if (document.getElementById('profile-email')) {
+                    document.getElementById('profile-email').value = user.email;
+                }
+                
+                if (document.getElementById('profile-phone')) {
+                    document.getElementById('profile-phone').value = user.phone || '';
+                }
+                
+                // Mettre à jour les compteurs
+                document.getElementById('orders-count').textContent = user.orders ? user.orders.length : 0;
+                document.getElementById('wishlist-count').textContent = user.wishlist ? user.wishlist.length : 0;
+                document.getElementById('points-count').textContent = user.points || 0;
+                
+                // Afficher ou masquer les messages "aucun élément" en fonction du contenu
+                if (user.orders && user.orders.length > 0) {
+                    document.querySelectorAll('.no-orders-message').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                } else {
+                    document.querySelectorAll('.no-orders-message').forEach(el => {
+                        el.style.display = 'block';
+                    });
+                }
+                
+                if (user.wishlist && user.wishlist.length > 0) {
+                    document.querySelectorAll('.no-wishlist-message').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                } else {
+                    document.querySelectorAll('.no-wishlist-message').forEach(el => {
+                        el.style.display = 'block';
+                    });
+                }
+            }
+            
+            function validatePhone(phone) {
+                // Valider un numéro de téléphone algérien
+                const re = /^(0)(5|6|7)[0-9]{8}$/;
+                return re.test(phone);
+            }
+            
+            // Gestionnaire d'événement pour le bouton "Ajouter une adresse"
+            const addAddressBtn = document.getElementById('add-address-btn');
+            
+            if (addAddressBtn) {
+                addAddressBtn.addEventListener('click', function() {
+                    showNotification('Cette fonctionnalité sera bientôt disponible !');
+                });
+            }
+            
+            // Gestionnaire d'événement pour le lien "Mot de passe oublié"
+            const forgotPasswordLink = document.querySelector('.forgot-password');
+            
+            if (forgotPasswordLink) {
+                forgotPasswordLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showNotification('Cette fonctionnalité sera bientôt disponible !');
+                });
+            }
+        });
+    </script>
+    
+    <style>
+        /* Styles spécifiques à la page compte */
+        .page-banner {
+            background-color: var(--secondary);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        
+        .page-banner h1 {
+            color: var(--text);
+            margin-bottom: 0;
+        }
+        
+        .account-section {
+            padding: 3rem 0;
+        }
+        
+        .account-login {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .auth-form-container {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .auth-form-container h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .auth-form-container p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .auth-form {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="password"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--secondary-dark);
+            font-family: var(--font-body);
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(125, 68, 39, 0.2);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            margin-top: 0.25rem;
+        }
+        
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+        
+        .error-message {
+            color: var(--error);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            min-height: 1rem;
+        }
+        
+        .full-width {
+            width: 100%;
+        }
+        
+        .auth-separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        .auth-separator::before,
+        .auth-separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--secondary-dark);
+        }
+        
+        .auth-separator span {
+            padding: 0 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .auth-alternatives {
+            text-align: center;
+        }
+        
+        .auth-alternatives p {
+            margin-bottom: 1rem;
+        }
+        
+        .forgot-password {
+            font-size: 0.9rem;
+        }
+        
+        .mt-1 {
+            margin-top: 1rem;
+        }
+        
+        /* Dashboard Styles */
+        .account-dashboard {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .dashboard-sidebar {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.5rem;
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--secondary);
+        }
+        
+        .user-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--text);
+        }
+        
+        .user-details h3 {
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+        
+        .user-details p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .dashboard-menu {
+            list-style: none;
+        }
+        
+        .dashboard-menu li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .dashboard-menu li a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            color: var(--text);
+            transition: var(--transition);
+        }
+        
+        .dashboard-menu li a:hover {
+            background-color: var(--secondary-light);
+        }
+        
+        .dashboard-menu li.active a {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .dashboard-content {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem;
+        }
+        
+        .dashboard-section {
+            display: none;
+        }
+        
+        .dashboard-section.active {
+            display: block;
+        }
+        
+        .dashboard-section h2 {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--secondary);
+        }
+        
+        /* Overview Cards */
+        .overview-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .overview-card {
+            background-color: var(--secondary-light);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .overview-card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+        
+        .overview-card-content h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .overview-card-content p {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--primary);
+        }
+        
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-header h3 {
+            margin-bottom: 0;
+            font-size: 1.25rem;
+        }
+        
+        .view-all {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* Empty Messages */
+        .no-orders-message,
+        .no-wishlist-message,
+        .no-addresses-message {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .no-orders-message p,
+        .no-wishlist-message p,
+        .no-addresses-message p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+        
+        /* Profile Form */
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        
+        .form-divider {
+            margin: 2rem 0 1.5rem;
+        }
+        
+        .form-divider h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .form-row {
+                flex-direction: row;
+            }
+            
+            .form-row .form-group {
+                flex: 1;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .account-dashboard {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+            
+            .dashboard-sidebar {
+                width: 250px;
+                flex-shrink: 0;
+            }
+            
+            .dashboard-content {
+                flex: 1;
+            }
+        }
+    </style>
+</body>
+</html>

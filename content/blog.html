@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - PageStore</title>
+    <link rel="shortcut icon" href="../image/logo.jpg" type="image/logo">
+    <meta name="description" content="Découvrez notre blog avec des articles sur la littérature, les nouveautés et des conseils de lecture pour tous les passionnés de livres.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pagestore.dz/content/blog.html">
+    <meta property="og:title" content="Blog - PageStore">
+    <meta property="og:description" content="Découvrez notre blog avec des articles sur la littérature, les nouveautés et des conseils de lecture pour tous les passionnés de livres.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517673132405-a56a62b18caf">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un livre, un auteur...">
+                    <button aria-label="Rechercher"><i class="fa fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="panier.html" class="cart-icon" aria-label="Panier">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="compte.html" class="account-icon" aria-label="Compte">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="livres.html">Livres <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                        <li><a href="livres.html?category=fiction">Fiction</a></li>
+                            <li><a href="livres.html?category=science-fiction">Science-Fiction</a></li>
+                            <li><a href="livres.html?category=drame">Drame</a></li>
+                            <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                             <li><a href="livres.html?category=essai">Essai</a></li>
+                              <li><a href="livres.html?category=thriller">Thriller</a></li>
+                              <li><a href="livres.html?category=romance">Romance</a></li>
+                              <li><a href="livres.html?category=education">Education</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="livres.html?new=true">Nouveautés</a></li>
+                    <li><a href="livres.html?bestseller=true">Meilleures ventes</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Notre Blog</h1>
+        </div>
+    </section>
+    
+    <!-- Blog Layout -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Main Content -->
+                <div class="blog-main">
+                    <!-- Featured Post -->
+                    <article class="blog-post featured-post">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1517673132405-a56a62b18caf" alt="Les tendances littéraires de 2023">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="post-category">Littérature</span>
+                                <span class="post-date">15 Mai 2023</span>
+                            </div>
+                            <h2 class="post-title">Les tendances littéraires de 2023 : Ce que les lecteurs algériens préfèrent</h2>
+                            <p class="post-excerpt">Découvrez les genres littéraires et les thèmes qui captent l'attention des lecteurs algériens cette année. Du roman historique au thriller psychologique, explorez les tendances qui façonnent le paysage littéraire.</p>
+                            <a href="article-tendances-litteraires.html" class="btn btn-outline">Lire l'article</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Regular Posts -->
+                    <div class="blog-posts-grid">
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Livres pour enfants">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Jeunesse</span>
+                                    <span class="post-date">10 Mai 2023</span>
+                                </div>
+                                <h2 class="post-title">5 livres essentiels pour développer l'amour de la lecture chez les enfants</h2>
+                                <p class="post-excerpt">Quels sont les livres qui peuvent captiver l'imagination des enfants et les encourager à devenir de grands lecteurs ? Nos experts en littérature jeunesse partagent leurs recommandations.</p>
+                                <a href="article-livres-enfants.html" class="read-more">Lire l'article <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1474932430478-367dbb6832c1" alt="Auteur algérien">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Auteurs</span>
+                                    <span class="post-date">5 Mai 2023</span>
+                                </div>
+                                <h2 class="post-title">Entretien avec Kamel Daoud : Son parcours, ses inspirations et ses projets</h2>
+                                <p class="post-excerpt">Nous avons eu le privilège de rencontrer Kamel Daoud, l'un des écrivains algériens les plus influents de sa génération. Découvrez son rapport à l'écriture et ses conseils aux jeunes auteurs.</p>
+                                <a href="article-kamel-daoud.html" class="read-more">Lire l'article <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1463320726281-696a485928c7" alt="Bibliothèque personnelle">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Conseils</span>
+                                    <span class="post-date">28 Avril 2025</span>
+                                </div>
+                                <h2 class="post-title">Comment organiser sa bibliothèque personnelle : Astuces et méthodes</h2>
+                                <p class="post-excerpt">Votre collection de livres s'agrandit et vous ne savez plus comment l'organiser ? Découvrez nos conseils pratiques pour créer une bibliothèque personnelle fonctionnelle et esthétique.</p>
+                                <a href="article-organiser-bibliotheque.html" class="read-more">Lire l'article <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6" alt="Livre audio">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Technologie</span>
+                                    <span class="post-date">20 Avril 2025</span>
+                                </div>
+                                <h2 class="post-title">Livres audio vs livres papier : Les avantages et inconvénients de chaque format</h2>
+                                <p class="post-excerpt">Le débat entre les livres traditionnels et les formats numériques continue. Nous analysons les avantages et les inconvénients de chaque option pour vous aider à faire le meilleur choix.</p>
+                                <a href="article-livre-audio-vs-papier.html" class="read-more">Lire l'article <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d" alt="Club de lecture">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Communauté</span>
+                                    <span class="post-date">15 Avril 2025</span>
+                                </div>
+                                <h2 class="post-title">Comment démarrer un club de lecture : Guide complet pour les passionnés</h2>
+                                <p class="post-excerpt">Créer un club de lecture est une excellente façon de partager votre passion pour les livres. Découvrez notre guide étape par étape pour lancer et animer un club de lecture dynamique.</p>
+                                <a href="article-club-lecture.html" class="read-more">Lire l'article <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-post">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1544716278-e513176f20b5" alt="Livres classiques">
+                            </div>
+                            <div class="post-content">
+                                <div class="post-meta">
+                                    <span class="post-category">Classiques</span>
+                                    <span class="post-date">8 Avril 2025</span>
+                                </div>
+                                <h2 class="post-title">10 classiques de la littérature que tout le monde devrait lire au moins une fois</h2>
+                                <p class="post-excerpt">La littérature classique offre des œuvres intemporelles qui continuent de résonner avec les lecteurs. Voici notre sélection des dix classiques incontournables à découvrir absolument.</p>
+                                <a href="article-classiques-litterature.html" class="read-more">Lire l'article <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <span class="page-current">1</span>
+                        <a href="#" class="page-number">2</a>
+                        <a href="#" class="page-number">3</a>
+                        <span class="page-dots">...</span>
+                        <a href="#" class="page-number">7</a>
+                        <a href="#" class="page-next">
+                            Page suivante <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="blog-sidebar">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget search-widget">
+                        <h3 class="widget-title">Recherche</h3>
+                        <form class="search-form">
+                            <input type="text" placeholder="Rechercher un article...">
+                            <button type="submit" aria-label="Rechercher"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget categories-widget">
+                        <h3 class="widget-title">Catégories</h3>
+                        <ul class="category-list">
+                            <li><a href="#">Littérature <span>(12)</span></a></li>
+                            <li><a href="#">Auteurs <span>(8)</span></a></li>
+                            <li><a href="#">Conseils <span>(15)</span></a></li>
+                            <li><a href="#">Jeunesse <span>(6)</span></a></li>
+                            <li><a href="#">Technologie <span>(4)</span></a></li>
+                            <li><a href="#">Communauté <span>(7)</span></a></li>
+                            <li><a href="#">Classiques <span>(9)</span></a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Popular Posts Widget -->
+                    <div class="sidebar-widget popular-posts-widget">
+                        <h3 class="widget-title">Articles populaires</h3>
+                        <div class="popular-posts">
+                            <article class="popular-post">
+                                <div class="popular-post-image">
+                                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Livres pour enfants">
+                                </div>
+                                <div class="popular-post-content">
+                                    <h4><a href="article-livres-enfants.html">5 livres essentiels pour développer l'amour de la lecture chez les enfants</a></h4>
+                                    <span class="post-date">10 Mai 2023</span>
+                                </div>
+                            </article>
+                            
+                            <article class="popular-post">
+                                <div class="popular-post-image">
+                                    <img src="https://images.unsplash.com/photo-1544716278-e513176f20b5" alt="Livres classiques">
+                                </div>
+                                <div class="popular-post-content">
+                                    <h4><a href="article-classiques-litterature.html">10 classiques de la littérature que tout le monde devrait lire</a></h4>
+                                    <span class="post-date">8 Avril 2023</span>
+                                </div>
+                            </article>
+                            
+                            <article class="popular-post">
+                                <div class="popular-post-image">
+                                    <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6" alt="Livre audio">
+                                </div>
+                                <div class="popular-post-content">
+                                    <h4><a href="article-livre-audio-vs-papier.html">Livres audio vs livres papier : Avantages et inconvénients</a></h4>
+                                    <span class="post-date">20 Avril 2023</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Widget -->
+                    <div class="sidebar-widget newsletter-widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <p>Abonnez-vous pour recevoir nos derniers articles et actualités.</p>
+                        <form class="newsletter-form-sidebar">
+                            <input type="email" placeholder="Votre adresse email" required>
+                            <button type="submit" class="btn btn-primary">S'abonner</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget tags-widget">
+                        <h3 class="widget-title">Tags</h3>
+                        <div class="tags-cloud">
+                            <a href="#" class="tag">Romans</a>
+                            <a href="#" class="tag">Poésie</a>
+                            <a href="#" class="tag">Biographies</a>
+                            <a href="#" class="tag">Science-Fiction</a>
+                            <a href="#" class="tag">Éducation</a>
+                            <a href="#" class="tag">Histoire</a>
+                            <a href="#" class="tag">Aventure</a>
+                            <a href="#" class="tag">Fantasy</a>
+                            <a href="#" class="tag">Mystère</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </h3>
+                    <p>Votre librairie en ligne préférée avec une large sélection de livres pour tous les goûts.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos de nous</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="conditions.html">Conditions d'utilisation</a></li>
+                        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="livres.html?category=fiction">Romans et Fiction</a></li>
+                        <li><a href="livres.html?category=non-fiction">Non-fiction</a></li>
+                        <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        <li><a href="livres.html?category=education">Éducation</a></li>
+                        <li><a href="livres.html">Toutes les catégories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Rue Krim Belkacem, Tizi-ouzou, Algérie</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>0546631036</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>contact@pagestore.dz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> PageStore. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../javascript/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Validation du formulaire de newsletter dans la sidebar
+            const sidebarNewsletterForm = document.querySelector('.newsletter-form-sidebar');
+            
+            if (sidebarNewsletterForm) {
+                sidebarNewsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    const email = emailInput.value.trim();
+                    
+                    if (validateEmail(email)) {
+                        // Simulation d'envoi de formulaire
+                        showNotification('Merci pour votre inscription à notre newsletter !');
+                        emailInput.value = '';
+                    } else {
+                        showNotification('Veuillez entrer une adresse email valide.');
+                    }
+                });
+            }
+            
+            // Validation du formulaire de recherche
+            const searchForm = document.querySelector('.search-form');
+            
+            if (searchForm) {
+                searchForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const searchInput = this.querySelector('input[type="text"]');
+                    const searchTerm = searchInput.value.trim();
+                    
+                    if (searchTerm.length > 0) {
+                        // Simulation de recherche
+                        showNotification(`Recherche en cours pour : ${searchTerm}`);
+                    } else {
+                        showNotification('Veuillez entrer un terme de recherche.');
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <style>
+        /* Styles spécifiques à la page blog */
+        .page-banner {
+            background-color: var(--secondary);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        
+        .page-banner h1 {
+            color: var(--text);
+            margin-bottom: 0;
+        }
+        
+        .blog-section {
+            padding: 3rem 0;
+        }
+        
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        /* Featured Post */
+        .featured-post {
+            margin-bottom: 3rem;
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .featured-post .post-image {
+            height: 300px;
+        }
+        
+        .featured-post .post-content {
+            padding: 2rem;
+        }
+        
+        .featured-post .post-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .featured-post .post-excerpt {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Regular Posts */
+        .blog-posts-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .blog-post {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .post-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .blog-post:hover .post-image img {
+            transform: scale(1.05);
+        }
+        
+        .post-content {
+            padding: 1.5rem;
+        }
+        
+        .post-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+        }
+        
+        .post-category {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .post-date {
+            color: var(--text-light);
+        }
+        
+        .post-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        
+        .post-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .read-more i {
+            transition: var(--transition);
+        }
+        
+        .read-more:hover i {
+            transform: translateX(3px);
+        }
+        
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+        
+        .pagination a, .pagination span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            height: 40px;
+            padding: 0 0.75rem;
+            border-radius: var(--radius);
+            background-color: var(--white);
+            color: var(--text);
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .pagination a:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        .page-current {
+            background-color: var(--primary) !important;
+            color: var(--white) !important;
+        }
+        
+        .page-next {
+            padding: 0 1rem;
+        }
+        
+        /* Sidebar */
+        .blog-sidebar {
+            margin-top: 2rem;
+        }
+        
+        .sidebar-widget {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .widget-title {
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--secondary);
+            position: relative;
+        }
+        
+        .widget-title::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary);
+            bottom: -2px;
+            left: 0;
+        }
+        
+        /* Search Widget */
+        .search-form {
+            position: relative;
+        }
+        
+        .search-form input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            padding-right: 3rem;
+            border-radius: 2rem;
+            border: 1px solid var(--secondary-dark);
+            font-family: var(--font-body);
+        }
+        
+        .search-form button {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+        
+        /* Categories Widget */
+        .category-list {
+            list-style: none;
+        }
+        
+        .category-list li {
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid var(--secondary-light);
+            padding-bottom: 0.75rem;
+        }
+        
+        .category-list li:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .category-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text);
+        }
+        
+        .category-list a:hover {
+            color: var(--primary);
+        }
+        
+        .category-list span {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+        
+        /* Popular Posts Widget */
+        .popular-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .popular-post {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .popular-post-image {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .popular-post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .popular-post-content h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .popular-post-content .post-date {
+            font-size: 0.8rem;
+        }
+        
+        /* Newsletter Widget */
+        .newsletter-widget p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        
+        .newsletter-form-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .newsletter-form-sidebar input {
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--secondary-dark);
+            font-family: var(--font-body);
+        }
+        
+        /* Tags Widget */
+        .tags-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tag {
+            background-color: var(--secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.85rem;
+            color: var(--text);
+            transition: var(--transition);
+        }
+        
+        .tag:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        
+        @media (min-width: 768px) {
+            .blog-posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .featured-post {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .featured-post .post-image {
+                height: auto;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .blog-layout {
+                grid-template-columns: 2fr 1fr;
+                align-items: start;
+            }
+            
+            .blog-sidebar {
+                margin-top: 0;
+            }
+            
+            .featured-post .post-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+</html>

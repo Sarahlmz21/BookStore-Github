@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - PageStore</title>
+    <link rel="shortcut icon" href="../image/logo.jpg" type="image/logo">
+    <meta name="description" content="Explorez le menu complet de PageStore - trouvez tous nos livres par catégorie, découvrez nos fonctionnalités et nos services.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pagestore.dz/content/menu.html">
+    <meta property="og:title" content="Menu - PageStore">
+    <meta property="og:description" content="Explorez le menu complet de PageStore - trouvez tous nos livres par catégorie, découvrez nos fonctionnalités et nos services.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544947950-fa07a98d237f">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700;900&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="../index.html">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </a>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un livre, un auteur...">
+                    <button aria-label="Rechercher"><i class="fa fa-search"></i></button>
+                </div>
+                
+                <div class="header-actions">
+                    <a href="panier.html" class="cart-icon" aria-label="Panier">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <a href="compte.html" class="account-icon" aria-label="Compte">
+                        <i class="fa fa-user"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="livres.html">Livres <i class="fa fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="livres.html?category=fiction">Fiction</a></li>
+                            <li><a href="livres.html?category=science-fiction">Science-Fiction</a></li>
+                            <li><a href="livres.html?category=drame">Drame</a></li>
+                            <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                            <li><a href="livres.html?category=essai">Essai</a></li>
+                            <li><a href="livres.html?category=thriller">Thriller</a></li>
+                            <li><a href="livres.html?category=romance">Romance</a></li>
+                            <li><a href="livres.html?category=Education">Education</a></li>
+                            <li><a href="livres.html?category=education">Education</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="livres.html?new=true">Nouveautés</a></li>
+                    <li><a href="livres.html?bestseller=true">Meilleures ventes</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Menu Principal</h1>
+        </div>
+    </section>
+    
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-container">
+                <!-- Catégories de livres -->
+                <div class="menu-category">
+                    <h2 class="menu-category-title">Catégories de Livres</h2>
+                    <div class="menu-subcategories">
+                        <div class="menu-subcategory">
+                            <h3>Fiction</h3>
+                            <ul>
+                                <li><a href="livres.html?category=fiction">Tous les romans</a></li>
+                                <li><a href="livres.html?category=romans-contemporains">Romans contemporains</a></li>
+                                <li><a href="livres.html?category=classics">Classiques</a></li>
+                                <li><a href="livres.html?category=historique">Romans historiques</a></li>
+                                <li><a href="livres.html?category=aventure">Aventure</a></li>
+                                <li><a href="livres.html?category=romance">Romance</a></li>
+                                <li><a href="livres.html?category=thriller">Thriller</a></li>
+                                <li><a href="livres.html?category=policier">Policier</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>Science-Fiction & Fantasy</h3>
+                            <ul>
+                                <li><a href="livres.html?category=science-fiction">Science-Fiction</a></li>
+                                <li><a href="livres.html?category=fantasy">Fantasy</a></li>
+                                <li><a href="livres.html?category=dystopie">Dystopie</a></li>
+                                <li><a href="livres.html?category=space-opera">Space Opera</a></li>
+                                <li><a href="livres.html?category=cyberpunk">Cyberpunk</a></li>
+                                <li><a href="livres.html?category=steampunk">Steampunk</a></li>
+                                <li><a href="livres.html?category=post-apocalyptique">Post-apocalyptique</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>Non-Fiction</h3>
+                            <ul>
+                                <li><a href="livres.html?category=non-fiction">Toute la non-fiction</a></li>
+                                <li><a href="livres.html?category=biographies">Biographies</a></li>
+                                <li><a href="livres.html?category=histoire">Histoire</a></li>
+                                <li><a href="livres.html?category=sciences">Sciences</a></li>
+                                <li><a href="livres.html?category=philosophie">Philosophie</a></li>
+                                <li><a href="livres.html?category=psychologie">Psychologie</a></li>
+                                <li><a href="livres.html?category=developpement-personnel">Développement personnel</a></li>
+                                <li><a href="livres.html?category=business">Business & Management</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>Jeunesse</h3>
+                            <ul>
+                                <li><a href="livres.html?category=jeunesse">Tous les livres jeunesse</a></li>
+                                <li><a href="livres.html?category=album-jeunesse">Albums illustrés</a></li>
+                                <li><a href="livres.html?category=premières-lectures">Premières lectures (3-6 ans)</a></li>
+                                <li><a href="livres.html?category=romans-enfants">Romans enfants (7-12 ans)</a></li>
+                                <li><a href="livres.html?category=romans-ados">Romans ados (13+)</a></li>
+                                <li><a href="livres.html?category=young-adult">Young Adult</a></li>
+                                <li><a href="livres.html?category=comics-manga">Comics & Mangas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Collections -->
+                <div class="menu-category">
+                    <h2 class="menu-category-title">Collections</h2>
+                    <div class="menu-subcategories">
+                        <div class="menu-subcategory">
+                            <h3>Par popularité</h3>
+                            <ul>
+                                <li><a href="livres.html?bestseller=true">Meilleures ventes</a></li>
+                                <li><a href="livres.html?new=true">Nouveautés</a></li>
+                                <li><a href="livres.html?promotion=true">En promotion</a></li>
+                                <li><a href="livres.html?exclusive=true">Exclusivités PageStore</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>Par auteur</h3>
+                            <ul>
+                                <li><a href="livres.html?author=algérien">Auteurs algériens</a></li>
+                                <li><a href="livres.html?author=maghrebin">Auteurs maghrébins</a></li>
+                                <li><a href="livres.html?author=arabe">Littérature arabe</a></li>
+                                <li><a href="livres.html?author=français">Auteurs français</a></li>
+                                <li><a href="livres.html?author=international">Auteurs internationaux</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>Par format</h3>
+                            <ul>
+                                <li><a href="livres.html?format=poche">Livres de poche</a></li>
+                                <li><a href="livres.html?format=grand">Grand format</a></li>
+                                <li><a href="livres.html?format=collector">Éditions collector</a></li>
+                                <li><a href="livres.html?format=illustre">Livres illustrés</a></li>
+                                <li><a href="livres.html?format=coffret">Coffrets</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>Sélections spéciales</h3>
+                            <ul>
+                                <li><a href="livres.html?selection=rentrée-littéraire">Rentrée littéraire</a></li>
+                                <li><a href="livres.html?selection=prix-littéraires">Prix littéraires</a></li>
+                                <li><a href="livres.html?selection=scolaire">Livres scolaires</a></li>
+                                <li><a href="livres.html?selection=langue-originale">En langue originale</a></li>
+                                <li><a href="livres.html?selection=classics">Classiques intemporels</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div class="menu-category">
+                    <h2 class="menu-category-title">Services PageStore</h2>
+                    <div class="menu-subcategories">
+                        <div class="menu-subcategory">
+                            <h3>Mon PageStore</h3>
+                            <ul>
+                                <li><a href="compte.html">Mon compte</a></li>
+                                <li><a href="panier.html">Mon panier</a></li>
+                                <li><a href="compte.html#orders">Mes commandes</a></li>
+                                <li><a href="compte.html#wishlist">Ma liste de souhaits</a></li>
+                                <li><a href="inscription.html">Créer un compte</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>Aide & Information</h3>
+                            <ul>
+                                <li><a href="contact.html">Contactez-nous</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="livraison.html">Livraison</a></li>
+                                <li><a href="retours.html">Retours et remboursements</a></li>
+                                <li><a href="paiement.html">Modes de paiement</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>À propos de PageStore</h3>
+                            <ul>
+                                <li><a href="a-propos.html">Notre histoire</a></li>
+                                <li><a href="boutiques.html">Nos boutiques</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="evenements.html">Événements</a></li>
+                                <li><a href="recrutement.html">Recrutement</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-subcategory">
+                            <h3>Mentions légales</h3>
+                            <ul>
+                                <li><a href="conditions.html">Conditions générales de vente</a></li>
+                                <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                                <li><a href="cookies.html">Gestion des cookies</a></li>
+                                <li><a href="mentions-legales.html">Mentions légales</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-logo">
+                        <span class="logo-text">Page<span class="logo-accent">Store</span></span>
+                    </h3>
+                    <p>Votre librairie en ligne préférée avec une large sélection de livres pour tous les goûts.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos de nous</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="conditions.html">Conditions d'utilisation</a></li>
+                        <li><a href="confidentialite.html">Politique de confidentialité</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Catégories</h3>
+                    <ul>
+                        <li><a href="livres.html?category=fiction">Romans et Fiction</a></li>
+                        <li><a href="livres.html?category=non-fiction">Non-fiction</a></li>
+                        <li><a href="livres.html?category=jeunesse">Jeunesse</a></li>
+                        <li><a href="livres.html?category=education">Éducation</a></li>
+                        <li><a href="livres.html">Toutes les catégories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>Rue Krim Belkacem, Tizi-ouzou, Algérie</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>0546631036</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>contact@pagestore.dz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2025</span> PageStore. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="../javascript/script.js"></script>
+    
+    <style>
+        /* Styles spécifiques à la page menu */
+        .page-banner {
+            background-color: var(--secondary);
+            padding: 2.5rem 0;
+            text-align: center;
+        }
+        
+        .page-banner h1 {
+            color: var(--text);
+            margin-bottom: 0;
+        }
+        
+        .menu-section {
+            padding: 3rem 0;
+        }
+        
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        .menu-category {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        
+        .menu-category-title {
+            padding: 1.5rem;
+            background-color: var(--primary);
+            color: var(--white);
+            margin-bottom: 0;
+            font-size: 1.5rem;
+        }
+        
+        .menu-subcategories {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            padding: 1.5rem;
+        }
+        
+        .menu-subcategory {
+            padding: 1rem;
+        }
+        
+        .menu-subcategory h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--secondary);
+            color: var(--primary);
+        }
+        
+        .menu-subcategory ul {
+            list-style: none;
+            margin-left: 0.5rem;
+        }
+        
+        .menu-subcategory li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .menu-subcategory li a {
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .menu-subcategory li a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .menu-subcategory li a:before {
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 0.5rem;
+            color: var(--primary);
+            font-size: 0.85rem;
+        }
+        
+        @media (min-width: 768px) {
+            .menu-subcategories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .menu-subcategories {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</body>
+</html>
